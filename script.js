@@ -10,9 +10,23 @@ input.addEventListener("keypress", function (event) {
         //Give ID to list item
         element.id = "li-" + count;
         count++;
+        element.className = "list-item";
+
+        //Create delete button 
+        let elementButton = document.createElement("a");
+        elementButton.href = "#";
+        elementButton.className = "delete-button";
+        elementButton.innerHTML = "X";
+        elementButton.addEventListener("click", function (event) {
+            event.preventDefault();
+            let li = event.target.parentElement;
+            ul.removeChild(li);
+        });
 
         //The list item takes the value of the input field
-        element.innerHTML = input.value;
+        element.innerHTML = input.value + " ";
+        //Delete button gets added to list element
+        element.appendChild(elementButton);
         //The list item is added to list
         ul.appendChild(element);
         //Input field gets cleared
@@ -36,6 +50,5 @@ input.addEventListener("keypress", function (event) {
         element.addEventListener('click', (event) => {
             element.style.textDecoration = "line-through";
         });
-
     }
 });

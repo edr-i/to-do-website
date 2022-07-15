@@ -8,27 +8,16 @@
     <title>To-Do Website</title>
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/pure-min.css"
         integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
-    <style>
-        li {
-            cursor: pointer;
-        }
-        body {
-            padding: 1rem;
-            background: linear-gradient(90deg, hsla(186, 33%, 94%, 1) 0%, hsla(216, 41%, 79%, 1) 100%);
-        }
-        input {
-            background: transparent;
-            border: none;
-            outline: none;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h2>To-Do Website</h2>
-    <label for="to-do">Enter new task:</label>
-    <input type="text" id="to-do" placeholder="Ex: Walk the dog" maxlength="50">
-    <ul id="list"></ul>
+    <div class="container">
+        <h2>To-Do List</h2>
+        <label for="to-do">Enter new task:</label>
+        <input type="text" id="to-do" placeholder="Ex: Walk the dog" maxlength="50">
+        <ul id="list"></ul>
+    </div>
 </body>
 
 </html>
